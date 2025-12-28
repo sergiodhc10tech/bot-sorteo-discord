@@ -2,11 +2,10 @@ import discord
 from discord.ext import commands
 import os
 
-
-DISCORD_TOKEN==${{shared.DICORD_TOKEN}}
-TOKEN = os.getenv(DISCORD_TOKEN)  
+TOKEN = os.getenv("TOKEN")
 ARCHIVO = "participantes.txt"
 sorteo_abierto = True
+
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -101,4 +100,5 @@ async def reset(ctx):
     await ctx.send("🧹 Lista borrada. Nuevo sorteo iniciado.")
 
 bot.run(TOKEN)
+
 
